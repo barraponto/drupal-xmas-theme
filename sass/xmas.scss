@@ -1,0 +1,150 @@
+@import "drupal/zen";
+@import "xmas-skin";
+
+
+// Map the zen variables to the skin variables
+$zen-width: $xmas-width;
+$zen-first-sidebar-width: $xmas-first-sidebar-width;
+$zen-second-sidebar-width: $xmas-second-sidebar-width;
+$zen-content-position: $xmas-content-position;
+$zen-navigation-width: $xmas-navigation-width;
+$zen-navigation-height: $xmas-navigation-height;
+$zen-proportional-typeface: $xmas-proportional-typeface;
+$zen-monospaced-typeface: $xmas-monospaced-typeface;
+$zen-base-font-size: $xmas-base-font-size;
+
+// Use this mixin to generate the Zen layout
+@include zen-layout;
+
+// Use this mixin to properly position the #navigation div
+@include zen-navigation;
+
+//Use this mixin to set the typefaces
+@include zen-typefaces;
+
+//Use this mixin to set the font sizes
+@include zen-typography;
+
+body { @extend .-xmas-body; }
+
+#skip-link { @extend .-xmas-skip-link; }
+
+#page-wrapper {
+  @extend .-xmas-page;
+
+/* Content */
+
+  #content {
+    #content-area { @extend .-xmas-content-area; }
+    #mission { @extend .-xmas-mission; }
+    #breadcrumb { @extend .-xmas-breadcrumb; }
+    .messages {
+      &.status { @extend .-xmas-messages-status; }
+      &.warning { @extend .-xmas-messages-warning; }
+      &.error { @extend .-xmas-messages-error; }
+      &.help { @extend .-xmas-messages-help; } }
+    .tabs {
+      @extend .-xmas-tabs;
+      .primary { @extend .-xmas-primary-tabs; }
+      .secondary { @extend .-xmas-secondary-tabs; } }
+    .feed-icons { }
+
+/* Nodes */
+
+    .node {
+      @extend .-xmas-node;
+      .picture { @extend .-xmas-node-picture; }
+      .title { @extend .-xmas-node-title; }
+      .meta {
+        @extend .-xmas-node-meta;
+        .submitted { @extend .-xmas-node-submitted; }
+        .terms { @extend .-xmas-node-terms; } }
+      .content { @extend .-xmas-node-content; }
+      .links { @extend .-xmas-node-links; }
+      &.node-sticky { @extend .-xmas-node-sticky; }
+      &.node-unpublished { @extend .-xmas-node-unpublished; }
+      &.node-by-viewer { @extend .-xmas-node-by-viewer; }
+      .preview & { @extend .-xmas-node-preview; } }
+
+/* Profiles */
+
+    .profile {
+      @extend .-xmas-profile;
+      .picture { @extend .-xmas-profile-picture; }
+      h3 { @extend .-xmas-profile-category-title; } /* profile category header */
+      dl { /* profile category wrapper */
+        @extend .-xmas-profile-category-wrapper;
+        dt { @extend .-xmas-profile-field-label; } /* profile category label */
+        dd { @extend .-xmas-profile-field-value; } } } } /*  profile category value */
+
+/* Regions */
+
+  .region-sidebar-first {
+    .block {
+      @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; }
+      &.odd { }
+      &.even { } } }
+
+  .region-sidebar-second {
+    .block {
+      @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; }
+      &.odd { }
+      &.even { } } }
+
+  .region-navigation {
+    #main-menu {
+      @extend .-xmas-menu;
+      > li.expanded > ul.menu { @extend .-xmas-submenu; } }
+    .block { @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; } } }
+
+  .region-highlight {
+    .block {
+      @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; } } }
+
+  .region-content-top {
+    .block {
+      @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; } } }
+
+  .region-content-bottom {
+    .block {
+      @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; } } }
+
+  .region-header {
+    #logo { @extend .-xmas-logo; }
+    #name-and-slogan {
+      @extend .-xmas-name-and-slogan;
+      #site-name { @extend .-xmas-site-name; }
+      #site-slogan { @extend .-xmas-site-slogan; } }
+    #search-box { @extend .-xmas-search-box; }
+    .block {
+      @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; } } }
+
+  .region-footer {
+    #secondary-menu { @extend .-xmas-menu; }
+    #footer-message { @extend .-xmas-footer-message; }
+    .block {
+      @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; } } }
+
+  .region-page-closure {
+    .block {
+      @extend .-xmas-block;
+      .title { @extend .-xmas-block-title; }
+      .content { @extend .-xmas-block-content; } } }
+
+}

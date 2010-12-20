@@ -1,0 +1,223 @@
+
+
+// This variable controls the total width of the container div
+// You can use px for a Fixed layout or % for a Liquid layout
+$xmas-width: 960px;
+
+// These variables control the size of the sidebars
+$xmas-first-sidebar-width: 200px;
+$xmas-second-sidebar-width: 200px;
+
+// This variable positions the content relative to the sidebars
+// Possible values are first, last, middle
+$xmas-content-position: "middle";
+
+// These variables control the #navigation div
+$xmas-navigation-width: 100%;
+$xmas-navigation-height: 2.3em;
+
+// These variables control the typefaces as defined in html-reset.css
+$xmas-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
+$xmas-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
+
+// These variables control the font sizes as defined in html-reset.css
+$xmas-base-font-size: 14px;
+
+// Page Components
+
+.-xmas-body { }
+
+.-xmas-skip-link { }
+
+.-xmas-page { }
+
+.-xmas-content-area { }
+
+.-xmas-logo { }
+
+.-xmas-name-and-slogan { } // usally the .name-and-slogan div
+
+.-xmas-site-name {
+  a { } }
+
+.-xmas-site-slogan { }
+
+.-xmas-search-box {
+  #search {
+    .form-item { 
+      .form-text { } }
+    .form-submit { } } }
+
+.-xmas-mission { }
+
+.-xmas-breadcrumb {
+  a { } }
+
+.-xmas-messages {
+  ul {
+    li { } } }
+
+.-xmas-messages-error { @extend .-xmas-messages; }
+
+.-xmas-messages-warning { @extend .-xmas-messages; }
+
+.-xmas-messages-status { @extend .-xmas-messages; }
+
+.-xmas-messages-help { @extend .-xmas-messages; }
+
+.-xmas-tabs { } // usually the .tabs div
+
+.-xmas-primary-tabs {
+  li {
+    a { }
+    &.active {
+      a { } } } }
+
+.-xmas-secondary-tabs {
+  li {
+    a { }
+    &.active {
+      a { } } } }
+
+.-xmas-menu {
+  > li { // use '>' to target only child items
+    &.first { }
+    &.last { }
+    &.expanded { } } }
+
+.-xmas-submenu { // think expanded menus, not secondary menus
+    > li { // use '>' to target only child items
+    &.first { }
+    &.last { }
+    &.expanded { } } }
+
+.-xmas-pager {
+  .pager-item { }
+  .pager-current { }
+  .pager-previous { }
+  .pager-next { }
+  .pager-first { }
+  .pager-last { }
+  a { } }
+
+.-xmas-feed-icons {
+  .feed-icon { } }
+
+.-xmas-footer-message { }
+
+// Block Components
+// Make copies of these components to make for a diversity of block styles
+.-xmas-block { }
+.-xmas-block-title { }
+.-xmas-block-content { }
+
+// Node Components
+.-xmas-node { }
+
+.-xmas-node-picture { }
+
+.-xmas-node-title { }
+
+.-xmas-node-meta {
+
+.-xmas-node-submitted { }
+
+.-xmas-node-terms { } }
+
+.-xmas-node-content { @extend .-xmas-content-object; }
+
+.-xmas-node-links {
+  li {
+    &.first { }
+    &.last { } } }
+
+.-xmas-node-sticky { }
+
+.-xmas-node-unpublished {
+    .unpublished { } }
+
+.-xmas-node-by-viewer { }
+
+.-xmas-node-preview { }
+
+// Profile Components
+.-xmas-profile { }
+
+.-xmas-profile-picture { }
+
+.-xmas-profile-category-header { }
+
+.-xmas-profile-category-wrapper { }
+
+.-xmas-profile-field-label { }
+
+.-xmas-profile-field-value { }
+
+// Block Elements
+// Make a copy of these if you're looking for block diversity
+.-xmas-h2 { }
+
+.-xmas-h3 { }
+
+.-xmas-p { }
+
+.-xmas-li { }
+
+.-xmas-ul {
+  li { @extend .-xmas-li; } }
+
+.-xmas-ol {
+  li { @extend .-xmas-li; } }
+
+.-xmas-a {
+  &:link { }
+  &:visited { }
+  &:hover { }
+  &:focus { }
+  &:active { } }
+
+// Node Elements
+// These objects shouldn't appear outside of nodes, but you never know.
+.-xmas-h4 { }
+
+.-xmas-pre { }
+
+.-xmas-code { }
+
+.-xmas-blockquote { }
+
+.-xmas-cite { }
+
+.-xmas-table {
+  caption { }
+  tr {
+    &.odd { }
+    &.even { }
+    th { }
+    td { }
+    thead & { }
+    tfoot & { }
+    tbody & { } } }
+
+// Content Classes
+.-xmas-node-content {
+  h2 { @extend .-xmas-h2; }
+  h3 { @extend .-xmas-h3; }
+  h4 { @extend .-xmas-h4; }
+  p { @extend .-xmas-p; }
+  ul { @extend .-xmas-ul; }
+  ol { @extend .-xmas-ol; }
+  li { @extend .-xmas-li; }
+  table { @extend .-xmas-table; }
+  code { @extend .-xmas-code; }
+  blockquote { @extend .-xmas-blockquote; }
+  a { @extend .-xmas-a; } }
+
+.-xmas-block-content {
+  h3 { @extend .-xmas-h3; }
+  h4 { @extend .-xmas-h4; }
+  p { @extend .-xmas-p; }
+  ul { @extend .-xmas-ul; }
+  ol { @extend .-xmas-ol; }
+  li { @extend .-xmas-li; }
+  a { @extend .-xmas-a; } }

@@ -1,5 +1,3 @@
-
-
 // This variable controls the total width of the container div
 // You can use px for a Fixed layout or % for a Liquid layout
 $xmas-width: 960px;
@@ -17,21 +15,27 @@ $xmas-navigation-width: 100%;
 $xmas-navigation-height: 2.3em;
 
 // These variables control the typefaces as defined in html-reset.css
-$xmas-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
+$xmas-proportional-typeface: 'Georgia, "Times New Roman", Times, serif';
 $xmas-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 
 // These variables control the font sizes as defined in html-reset.css
 $xmas-base-font-size: 14px;
 
+// Colors
+$dark-blue: #1F1F30;
+$dark-grey: #333333;
+
 // Page Components
 
-.-xmas-body { }
+.-xmas-body {
+  background: image-url('bk_body.jpg') no-repeat scroll top center $dark-blue;
+  color: $dark-grey; }
 
 .-xmas-skip-link { }
 
 .-xmas-page { }
 
-.-xmas-content-area { }
+.-xmas-header { }
 
 .-xmas-logo { }
 
@@ -49,6 +53,14 @@ $xmas-base-font-size: 14px;
     .form-submit { } } }
 
 .-xmas-mission { }
+
+.-xmas-main { }
+
+.-xmas-content { }
+
+.-xmas-sidebar { }
+
+.-xmas-content-area { }
 
 .-xmas-breadcrumb {
   a { } }
@@ -90,6 +102,8 @@ $xmas-base-font-size: 14px;
     &.first { }
     &.last { }
     &.expanded { } } }
+
+.-xmas-footer { }
 
 .-xmas-pager {
   .pager-item { }

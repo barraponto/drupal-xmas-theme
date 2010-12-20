@@ -30,7 +30,8 @@ body { @extend .-xmas-body; }
 #skip-link { @extend .-xmas-skip-link; }
 
 #page-wrapper {
-  @extend .-xmas-page;
+  
+  #page { @extend .-xmas-page; }
 
 /* Content */
 
@@ -122,6 +123,7 @@ body { @extend .-xmas-body; }
       .content { @extend .-xmas-block-content; } } }
 
   .region-header {
+    @extend .-xmas-header;
     #logo { @extend .-xmas-logo; }
     #name-and-slogan {
       @extend .-xmas-name-and-slogan;

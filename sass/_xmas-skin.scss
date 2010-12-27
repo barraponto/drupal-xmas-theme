@@ -25,8 +25,75 @@ $xmas-base-font-size: 14px;
 $dark-blue: #1F1F30;
 $dark-grey: #333333;
 
-// Page Components
+//HTML Elements
+.-xmas-h2 { } //Not meant for Block titles
 
+.-xmas-h3 { }
+
+.-xmas-h4 { }
+
+.-xmas-p { }
+
+.-xmas-li { }
+
+.-xmas-ul {
+  li { @extend .-xmas-li; } }
+
+.-xmas-ol {
+  li { @extend .-xmas-li; } }
+
+.-xmas-blockquote { }
+
+.-xmas-cite { }
+
+.-xmas-a {
+  &:link { }
+  &:visited { }
+  &:hover { }
+  &:focus { }
+  &:active { } }
+
+.-xmas-pre { }
+
+.-xmas-code { }
+
+.-xmas-table {
+  caption { }
+  tr {
+    &.odd { }
+    &.even { }
+    th { }
+    td { }
+    thead & { }
+    tfoot & { }
+    tbody & { } } }
+
+// Content Classes
+.-xmas-node-content {
+  h2 { @extend .-xmas-h2; }
+  h3 { @extend .-xmas-h3; }
+  h4 { @extend .-xmas-h4; }
+  p { @extend .-xmas-p; }
+  li { @extend .-xmas-li; }
+  ul { @extend .-xmas-ul; }
+  ol { @extend .-xmas-ol; }
+  pre { @extend .-xmas-pre; }
+  code { @extend .-xmas-code; }
+  blockquote { @extend .-xmas-blockquote; }
+  cite { @extend .-xmas-cite; }
+  a { @extend .-xmas-a; }
+  table { @extend .-xmas-table; } }
+
+.-xmas-block-content {
+  h3 { @extend .-xmas-h3; }
+  h4 { @extend .-xmas-h4; }
+  p { @extend .-xmas-p; }
+  ul { @extend .-xmas-ul; }
+  ol { @extend .-xmas-ol; }
+  li { @extend .-xmas-li; }
+  a { @extend .-xmas-a; } }
+
+// Page Components
 .-xmas-body {
   background: image-url('bk_body.jpg') no-repeat scroll top center $dark-blue;
   color: $dark-grey; }
@@ -56,9 +123,9 @@ $dark-grey: #333333;
 
 .-xmas-main { }
 
-.-xmas-content { }
-
 .-xmas-sidebar { }
+
+.-xmas-content { }
 
 .-xmas-content-area { }
 
@@ -122,8 +189,10 @@ $dark-grey: #333333;
 // Block Components
 // Make copies of these components to make for a diversity of block styles
 .-xmas-block { }
+
 .-xmas-block-title { }
-.-xmas-block-content { }
+
+.-xmas-block-content { @extend .-xmas-block-content; }
 
 // Node Components
 .-xmas-node { }
@@ -138,7 +207,7 @@ $dark-grey: #333333;
 
 .-xmas-node-terms { } }
 
-.-xmas-node-content { @extend .-xmas-content-object; }
+.-xmas-node-content { @extend .-xmas-node-content; }
 
 .-xmas-node-links {
   li {
@@ -166,72 +235,3 @@ $dark-grey: #333333;
 .-xmas-profile-field-label { }
 
 .-xmas-profile-field-value { }
-
-// Block Elements
-// Make a copy of these if you're looking for block diversity
-.-xmas-h2 { }
-
-.-xmas-h3 { }
-
-.-xmas-p { }
-
-.-xmas-li { }
-
-.-xmas-ul {
-  li { @extend .-xmas-li; } }
-
-.-xmas-ol {
-  li { @extend .-xmas-li; } }
-
-.-xmas-a {
-  &:link { }
-  &:visited { }
-  &:hover { }
-  &:focus { }
-  &:active { } }
-
-// Node Elements
-// These objects shouldn't appear outside of nodes, but you never know.
-.-xmas-h4 { }
-
-.-xmas-pre { }
-
-.-xmas-code { }
-
-.-xmas-blockquote { }
-
-.-xmas-cite { }
-
-.-xmas-table {
-  caption { }
-  tr {
-    &.odd { }
-    &.even { }
-    th { }
-    td { }
-    thead & { }
-    tfoot & { }
-    tbody & { } } }
-
-// Content Classes
-.-xmas-node-content {
-  h2 { @extend .-xmas-h2; }
-  h3 { @extend .-xmas-h3; }
-  h4 { @extend .-xmas-h4; }
-  p { @extend .-xmas-p; }
-  ul { @extend .-xmas-ul; }
-  ol { @extend .-xmas-ol; }
-  li { @extend .-xmas-li; }
-  table { @extend .-xmas-table; }
-  code { @extend .-xmas-code; }
-  blockquote { @extend .-xmas-blockquote; }
-  a { @extend .-xmas-a; } }
-
-.-xmas-block-content {
-  h3 { @extend .-xmas-h3; }
-  h4 { @extend .-xmas-h4; }
-  p { @extend .-xmas-p; }
-  ul { @extend .-xmas-ul; }
-  ol { @extend .-xmas-ol; }
-  li { @extend .-xmas-li; }
-  a { @extend .-xmas-a; } }

@@ -22,8 +22,10 @@ $xmas-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 $xmas-base-font-size: 14px;
 
 // Colors
-$dark-blue: #1F1F30;
-$dark-grey: #333333;
+$xmas-blue: #0079BB;
+$xmas-dark-blue: #1F1F30;
+$xmas-dark-grey: #333333;
+$xmas-white: #FFFFFF;
 
 //HTML Elements
 .-xmas-h2 { } //Not meant for Block titles
@@ -47,9 +49,12 @@ $dark-grey: #333333;
 .-xmas-cite { }
 
 .-xmas-a {
+  color: $xmas-blue;
+  text-decoration: none;
   &:link { }
   &:visited { }
-  &:hover { }
+  &:hover {
+    text-decoration: underline; }
   &:focus { }
   &:active { } }
 
@@ -95,21 +100,26 @@ $dark-grey: #333333;
 
 // Page Components
 .-xmas-body {
-  background: image-url('bk_body.jpg') no-repeat scroll top center $dark-blue;
-  color: $dark-grey; }
+  background: image-url('bk_body.jpg') no-repeat scroll top center $xmas-dark-blue;
+  color: $xmas-dark-grey; }
 
 .-xmas-skip-link { }
 
 .-xmas-page { }
 
-.-xmas-header { }
+.-xmas-header {
+  height: 229px;
+  position: relative; }
 
 .-xmas-logo { }
 
 .-xmas-name-and-slogan { } // usally the .name-and-slogan div
 
 .-xmas-site-name {
-  a { } }
+  font-size: 2.429em; //34px if base font size is 14px
+  line-height: 1em;
+  a {
+    @include link-colors($xmas-white); } }
 
 .-xmas-site-slogan { }
 

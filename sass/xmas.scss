@@ -33,6 +33,15 @@ body { @extend .-xmas-body; }
   
   #page { @extend .-xmas-page; }
 
+  #header { 
+    @extend .-xmas-header; 
+    #logo { @extend .-xmas-logo; }
+    #name-and-slogan {
+      @extend .-xmas-name-and-slogan;
+      #site-name { @extend .-xmas-site-name; }
+      #site-slogan { @extend .-xmas-site-slogan; } }
+    #search-box { @extend .-xmas-search-box; } }
+
 /* Content */
 
   #content {
@@ -123,13 +132,6 @@ body { @extend .-xmas-body; }
       .content { @extend .-xmas-block-content; } } }
 
   .region-header {
-    @extend .-xmas-header;
-    #logo { @extend .-xmas-logo; }
-    #name-and-slogan {
-      @extend .-xmas-name-and-slogan;
-      #site-name { @extend .-xmas-site-name; }
-      #site-slogan { @extend .-xmas-site-slogan; } }
-    #search-box { @extend .-xmas-search-box; }
     .block {
       @extend .-xmas-block;
       .title { @extend .-xmas-block-title; }

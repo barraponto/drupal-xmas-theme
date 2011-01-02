@@ -123,19 +123,17 @@ $xmas-white: #FFFFFF;
 
 .-xmas-site-slogan { }
 
-.-xmas-search-box {
-  #search {
-    .form-item { 
-      .form-text { } }
-    .form-submit { } } }
-
 .-xmas-mission { }
 
 .-xmas-main { }
 
-.-xmas-sidebar { }
+.-xmas-sidebar { } //make a copy to have different sidebars
+
+.-xmas-navigation { }
 
 .-xmas-content { }
+
+.-xmas-title { } //this will be the h1, except for the home page
 
 .-xmas-content-area { }
 
@@ -168,6 +166,7 @@ $xmas-white: #FFFFFF;
     &.active {
       a { } } } }
 
+// Make copies of these components for a diversity of menu styles
 .-xmas-menu {
   > li { // use '>' to target only child items
     &.first { }
@@ -197,7 +196,7 @@ $xmas-white: #FFFFFF;
 .-xmas-footer-message { }
 
 // Block Components
-// Make copies of these components to make for a diversity of block styles
+// Make copies of these components for a diversity of block styles
 .-xmas-block { }
 
 .-xmas-block-title { }
@@ -205,11 +204,12 @@ $xmas-white: #FFFFFF;
 .-xmas-block-content { @extend .-xmas-block-content; }
 
 // Node Components
+// Make copies of these components for a diversity of node styles
 .-xmas-node { }
 
 .-xmas-node-picture { }
 
-.-xmas-node-title { }
+.-xmas-node-title { } //meant for node listings, see also .-xmas-title
 
 .-xmas-node-meta {
 

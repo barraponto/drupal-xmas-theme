@@ -1,7 +1,6 @@
 @import "drupal/zen";
 @import "xmas-skin";
 
-
 // Map the zen variables to the skin variables
 $zen-width: $xmas-width;
 $zen-first-sidebar-width: $xmas-first-sidebar-width;
@@ -33,6 +32,8 @@ body { @extend .-xmas-body; }
   
   #page { @extend .-xmas-page; }
 
+  #main { @extend .-xmas-main; }
+
   #header { 
     @extend .-xmas-header; 
     #logo { @extend .-xmas-logo; }
@@ -40,14 +41,26 @@ body { @extend .-xmas-body; }
       @extend .-xmas-name-and-slogan;
       #site-name { @extend .-xmas-site-name; }
       #site-slogan { @extend .-xmas-site-slogan; } }
-    #search-box { @extend .-xmas-search-box; } }
+    //#search-box { @extend .-xmas-search-box; } 
+  }
+
+  #navigation {
+    @extend .-xmas-navigation;
+    #main-menu {
+      @extend .-xmas-menu;
+      > li.expanded > ul.menu { @extend .-xmas-submenu; } } }
+
+  #footer {
+    @extend .-xmas-footer;
+    #secondary-menu { @extend .-xmas-menu; }
+    #footer-message { @extend .-xmas-footer-message; } }
 
 /* Content */
 
   #content {
-    #content-area { @extend .-xmas-content-area; }
-    #mission { @extend .-xmas-mission; }
+    @extend .-xmas-content;
     #breadcrumb { @extend .-xmas-breadcrumb; }
+    h1.title { @extend .-xmas-title; }
     .messages {
       &.status { @extend .-xmas-messages-status; }
       &.warning { @extend .-xmas-messages-warning; }
@@ -57,7 +70,11 @@ body { @extend .-xmas-body; }
       @extend .-xmas-tabs;
       .primary { @extend .-xmas-primary-tabs; }
       .secondary { @extend .-xmas-secondary-tabs; } }
-    .feed-icons { }
+    #content-area { 
+      @extend .-xmas-content-area; 
+      .pager { @extend .-xmas-pager; } }
+      #mission { @extend .-xmas-mission; }
+    .feed-icons { @extend .-xmas-feed-icons; }
 
 /* Nodes */
 
@@ -90,6 +107,7 @@ body { @extend .-xmas-body; }
 /* Regions */
 
   .region-sidebar-first {
+    @extend .-xmas-sidebar;
     .block {
       @extend .-xmas-block;
       .title { @extend .-xmas-block-title; }
@@ -98,6 +116,7 @@ body { @extend .-xmas-body; }
       &.even { } } }
 
   .region-sidebar-second {
+    @extend .-xmas-sidebar;
     .block {
       @extend .-xmas-block;
       .title { @extend .-xmas-block-title; }
@@ -106,9 +125,6 @@ body { @extend .-xmas-body; }
       &.even { } } }
 
   .region-navigation {
-    #main-menu {
-      @extend .-xmas-menu;
-      > li.expanded > ul.menu { @extend .-xmas-submenu; } }
     .block { @extend .-xmas-block;
       .title { @extend .-xmas-block-title; }
       .content { @extend .-xmas-block-content; } } }
@@ -138,8 +154,6 @@ body { @extend .-xmas-body; }
       .content { @extend .-xmas-block-content; } } }
 
   .region-footer {
-    #secondary-menu { @extend .-xmas-menu; }
-    #footer-message { @extend .-xmas-footer-message; }
     .block {
       @extend .-xmas-block;
       .title { @extend .-xmas-block-title; }

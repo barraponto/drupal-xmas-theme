@@ -25,6 +25,7 @@ $xmas-base-font-size: 14px;
 $xmas-blue: #0079BB;
 $xmas-dark-blue: #1F1F30;
 $xmas-dark-grey: #333333;
+$xmas-light-grey: #666666;
 $xmas-white: #FFFFFF;
 
 //HTML Elements
@@ -192,7 +193,12 @@ $xmas-white: #FFFFFF;
     &.last { }
     &.expanded { } } }
 
-.-xmas-footer { }
+.-xmas-footer {
+  padding: 65px 0 40px; /* TODO: vertical rhythm */
+  color: $xmas-light-grey;
+  background: image-url('bk_footer.jpg') 0 0 no-repeat;
+  position:relative; /* TODO: layout */
+}
 
 .-xmas-pager {
   .pager-item { }

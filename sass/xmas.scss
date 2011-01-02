@@ -58,7 +58,8 @@ body { @extend .-xmas-body; }
 /* Content */
 
   #content {
-    @extend .-xmas-content;
+    @extend .-xmas-content-wrapper;
+    .section { @extend .-xmas-content; }
     #breadcrumb { @extend .-xmas-breadcrumb; }
     h1.title { @extend .-xmas-title; }
     .messages {

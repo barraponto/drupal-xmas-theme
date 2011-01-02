@@ -3,12 +3,12 @@
 $xmas-width: 960px;
 
 // These variables control the size of the sidebars
-$xmas-first-sidebar-width: 200px;
+$xmas-first-sidebar-width: 270px;
 $xmas-second-sidebar-width: 200px;
 
 // This variable positions the content relative to the sidebars
 // Possible values are first, last, middle
-$xmas-content-position: "middle";
+$xmas-content-position: "first";
 
 // These variables control the #navigation div
 $xmas-navigation-width: 100%;
@@ -34,7 +34,9 @@ $xmas-white: #FFFFFF;
 
 .-xmas-h4 { }
 
-.-xmas-p { }
+.-xmas-p {
+  margin: 0.7em 0; /* TODO: vertical rhythm */
+}
 
 .-xmas-li { }
 
@@ -101,15 +103,16 @@ $xmas-white: #FFFFFF;
 // Page Components
 .-xmas-body {
   background: image-url('bk_body.jpg') no-repeat scroll top center $xmas-dark-blue;
-  color: $xmas-dark-grey; }
+  color: $xmas-dark-grey;
+  line-height: 135%; /* TODO: vertical rhythm */ }
 
 .-xmas-skip-link { }
 
 .-xmas-page { }
 
 .-xmas-header {
-  height: 229px;
-  position: relative; }
+  height: 229px; /* TODO: vertical rhythm */
+  position: relative; /* TODO: layout */ }
 
 .-xmas-logo { }
 
@@ -125,13 +128,22 @@ $xmas-white: #FFFFFF;
 
 .-xmas-mission { }
 
-.-xmas-main { }
+.-xmas-main {
+  background: $xmas-white image-url('bk_content.jpg') 0 0 repeat-y;;
+}
 
 .-xmas-sidebar { } //make a copy to have different sidebars
 
 .-xmas-navigation { }
 
-.-xmas-content { }
+.-xmas-content-wrapper {
+  // @include linear-gradient(color-stops($xmas-white 97%, darken($xmas-white, 5%)), left);
+  /* TODO: proper background */
+}
+.-xmas-content {
+  width: 635px;
+  margin: 0 auto;
+}
 
 .-xmas-title { } //this will be the h1, except for the home page
 
@@ -142,6 +154,7 @@ $xmas-white: #FFFFFF;
 
 .-xmas-messages {
   ul {
+    @include no-bullets;
     li { } } }
 
 .-xmas-messages-error { @extend .-xmas-messages; }

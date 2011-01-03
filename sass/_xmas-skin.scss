@@ -120,8 +120,9 @@ $xmas-white: #FFFFFF;
 .-xmas-name-and-slogan { } // usally the .name-and-slogan div
 
 .-xmas-site-name {
+  @extend .-xmas-title;
   font-size: 2.429em; //34px if base font size is 14px
-  line-height: 1em;
+  background-image: none;
   a {
     @include link-colors($xmas-white); } }
 
@@ -139,14 +140,20 @@ $xmas-white: #FFFFFF;
 
 .-xmas-content-wrapper {
   // @include linear-gradient(color-stops($xmas-white 97%, darken($xmas-white, 5%)), left);
-  /* TODO: proper background */
+  /* TODO: proper CSS3 background */
 }
 .-xmas-content {
   width: 635px;
   margin: 0 auto;
 }
 
-.-xmas-title { } //this will be the h1, except for the home page
+.-xmas-title {
+  background: image-url('bk_line.jpg') no-repeat scroll left bottom transparent;
+  font-size: 25px; /* TODO: vertical rhythm */
+  font-weight: normal;
+  letter-spacing: -1px;
+  padding-bottom: 25px; /* TODO: vertical rhythm */
+} //this will be the h1, except for the home page
 
 .-xmas-content-area { }
 
@@ -232,7 +239,9 @@ $xmas-white: #FFFFFF;
 
 .-xmas-node-picture { }
 
-.-xmas-node-title { } //meant for node listings, see also .-xmas-title
+.-xmas-node-title {
+  @extend .-xmas-title;
+} //meant for node listings, see also .-xmas-title
 
 .-xmas-node-meta {
 

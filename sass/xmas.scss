@@ -61,7 +61,9 @@ body { @extend .-xmas-body; }
     @extend .-xmas-content-wrapper;
     .section { @extend .-xmas-content; }
     #breadcrumb { @extend .-xmas-breadcrumb; }
-    h1.title { @extend .-xmas-title; }
+    h1.title { 
+      @extend .-xmas-title; 
+      a { @extend .-xmas-a; } }
     .messages {
       &.status { @extend .-xmas-messages-status; }
       &.warning { @extend .-xmas-messages-warning; }
@@ -71,7 +73,7 @@ body { @extend .-xmas-body; }
       @extend .-xmas-tabs;
       .primary { @extend .-xmas-primary-tabs; }
       .secondary { @extend .-xmas-secondary-tabs; } }
-    #content-area { 
+    #content-area {
       @extend .-xmas-content-area; 
       .pager { @extend .-xmas-pager; } }
       #mission { @extend .-xmas-mission; }
@@ -82,7 +84,9 @@ body { @extend .-xmas-body; }
     .node {
       @extend .-xmas-node;
       .picture { @extend .-xmas-node-picture; }
-      .title { @extend .-xmas-node-title; }
+      .title { 
+        @extend .-xmas-node-title;
+        a { @extend .-xmas-a; } }
       .meta {
         @extend .-xmas-node-meta;
         .submitted { @extend .-xmas-node-submitted; }

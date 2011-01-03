@@ -197,8 +197,12 @@ $xmas-white: #FFFFFF;
   padding: 65px 0 40px; /* TODO: vertical rhythm */
   color: $xmas-light-grey;
   background: image-url('bk_footer.jpg') 0 0 no-repeat;
-  position:relative; /* TODO: layout */
-}
+  position: relative; /* TODO: layout */ }
+
+.-xmas-footer-logo { /* meant for Site5 logo */
+  position: absolute; 
+  right: 0;
+  top: 65px; }
 
 .-xmas-pager {
   .pager-item { }

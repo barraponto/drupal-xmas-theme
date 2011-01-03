@@ -158,7 +158,9 @@ body { @extend .-xmas-body; }
     .block {
       @extend .-xmas-block;
       .title { @extend .-xmas-block-title; }
-      .content { @extend .-xmas-block-content; } } }
+      .content { @extend .-xmas-block-content; } }
+    #block-system-0 { 
+      @extend .-xmas-footer-logo; } }
 
   .region-page-closure {
     .block {

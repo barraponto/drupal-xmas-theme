@@ -15,8 +15,8 @@ $xmas-navigation-width: 100%;
 $xmas-navigation-height: 2.3em;
 
 // These variables control the typefaces as defined in html-reset.css
-$xmas-proportional-typeface: 'Georgia, "Times New Roman", Times, serif';
-$xmas-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
+$xmas-proportional-typeface: Georgia, "Times New Roman", Times, serif;
+$xmas-monospaced-typeface: "Courier New", "DejaVu Sans Mono", monospace;
 
 // These variables control the font sizes as defined in html-reset.css
 $xmas-base-font-size: 14px;
@@ -26,10 +26,15 @@ $xmas-blue: #0079BB;
 $xmas-dark-blue: #1F1F30;
 $xmas-dark-grey: #333333;
 $xmas-light-grey: #666666;
+$xmas-red: #C32400;
 $xmas-white: #FFFFFF;
 
 //HTML Elements
-.-xmas-h2 { } //Not meant for Block titles
+.-xmas-h2 {
+  font-size: 1.286em; //18px if base font-size is 14px
+  font-weight: normal;
+  color: $xmas-blue;
+} //Not meant for Block titles
 
 .-xmas-h3 { }
 
@@ -93,12 +98,23 @@ $xmas-white: #FFFFFF;
   table { @extend .-xmas-table; } }
 
 .-xmas-block-content {
+  margin-left: 1em;
   h3 { @extend .-xmas-h3; }
   h4 { @extend .-xmas-h4; }
   p { @extend .-xmas-p; }
-  ul { @extend .-xmas-ul; }
+  ul { 
+    @extend .-xmas-ul;
+    @include no-bullets; 
+    padding: 0;
+    margin: 0 0 20px 0; }
   ol { @extend .-xmas-ol; }
-  li { @extend .-xmas-li; }
+  li { 
+    @extend .-xmas-li;
+    padding: 5px;
+    border-bottom: 1px dotted #ccc;
+    a {
+      color: $xmas-light-grey;
+      &:hover { color: $xmas-blue; } } }
   a { @extend .-xmas-a; } }
 
 // Page Components
@@ -117,16 +133,29 @@ $xmas-white: #FFFFFF;
 
 .-xmas-logo { }
 
-.-xmas-name-and-slogan { } // usally the .name-and-slogan div
+.-xmas-name-and-slogan {
+  position: absolute; /* TODO: layout */
+  top: 70px; /* TODO: layout */
+  left: 70px; /* TODO: layout */
+  right: 70px; /* fixes misterious width quirk */
+} // usally the .name-and-slogan div
 
 .-xmas-site-name {
-  @extend .-xmas-title;
-  font-size: 2.429em; //34px if base font size is 14px
+  letter-spacing: -1px;
+  font-size: 2.429em; //34px if base font-size is 14px
   background-image: none;
+  padding: 0;
   a {
+    font-weight: normal;
+    line-height: 25px; /* TODO: vertical rhythm */
     @include link-colors($xmas-white); } }
 
-.-xmas-site-slogan { }
+.-xmas-site-slogan {
+  padding: 10px 0; /* TODO: vertical rhythm */
+  text-transform: uppercase;
+  font-size: 0.786em;
+  color: #CECFDB; /* TODO: color palette */
+}
 
 .-xmas-mission { }
 
@@ -145,20 +174,40 @@ $xmas-white: #FFFFFF;
 .-xmas-content {
   width: 635px;
   margin: 0 auto;
+  position: relative;
 }
 
-.-xmas-title {
-  background: image-url('bk_line.jpg') no-repeat scroll left bottom transparent;
-  font-size: 25px; /* TODO: vertical rhythm */
-  font-weight: normal;
-  letter-spacing: -1px;
-  padding-bottom: 25px; /* TODO: vertical rhythm */
-} //this will be the h1, except for the home page
+.-xmas-created {
+  position: absolute; /* TODO: layout */
+  top:0;
+  left: -40px;
+  height: 35px;
+  width: 70px;
+  background: image-url('bk_date.png') 0 0 no-repeat;
+  color: $xmas-white;
+  line-height: 25px; /* TODO: vertical rhythm */
+  text-align: center;
+  font-size: 0.786em; /* TODO: vertical rhythm */
+  text-transform: uppercase;
+  span {
+    font-weight: bold;
+    font-size: 19px;
+    vertical-align: middle; } }
 
 .-xmas-content-area { }
 
 .-xmas-breadcrumb {
   a { } }
+  
+.-xmas-title {
+  background: image-url('bk_line.jpg') no-repeat scroll left bottom transparent;
+  font-size: 1.786em; /* 25px if base font-size is 14px */
+  font-weight: normal;
+  letter-spacing: -1px;
+  padding-bottom: 25px; /* TODO: vertical rhythm */
+  .display-submitted & { 
+    background: none; }
+} //this will be the h1, except for the home page
 
 .-xmas-messages {
   ul {
@@ -212,10 +261,16 @@ $xmas-white: #FFFFFF;
   top: 65px; }
 
 .-xmas-pager {
+  margin: 0;
+  padding: 0;
   .pager-item { }
   .pager-current { }
-  .pager-previous { }
-  .pager-next { }
+  .pager-previous { 
+    float: right; /* TODO: layout */
+    margin: 5px 0 5px 15px; /* TODO: vertical rhythm */ }
+  .pager-next {
+    float: left; /* TODO: layout */
+    margin: 5px 15px 5px 0; /* TODO: vertical rhythm */ }
   .pager-first { }
   .pager-last { }
   a { } }
@@ -229,18 +284,36 @@ $xmas-white: #FFFFFF;
 // Make copies of these components for a diversity of block styles
 .-xmas-block { }
 
-.-xmas-block-title { }
+.-xmas-block-title {
+  background: image-url('bk_h2_right.png') 0 0 no-repeat;
+  height: 34px;
+  line-height: 32px;
+  text-indent: 33px;
+  text-transform: uppercase;
+  color: #DBEDF9;
+  text-shadow: #00659F 1px 1px;
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 2px;
+  margin-right: -7px;
+}
 
 .-xmas-block-content { @extend .-xmas-block-content; }
 
 // Node Components
 // Make copies of these components for a diversity of node styles
-.-xmas-node { }
+.-xmas-node {
+  background: image-url('bk_line_ornament.jpg') bottom left no-repeat;
+  padding-bottom:25px;
+  margin-bottom:20px;
+  position: relative;
+}
 
 .-xmas-node-picture { }
 
 .-xmas-node-title {
   @extend .-xmas-title;
+  .created ~ & { padding-left: 50px; }
 } //meant for node listings, see also .-xmas-title
 
 .-xmas-node-meta {
@@ -253,6 +326,10 @@ $xmas-white: #FFFFFF;
 
 .-xmas-node-links {
   li {
+    a {
+      @extend .-xmas-a;
+      color: $xmas-red;
+      font-weight: bold; }
     &.first { }
     &.last { } } }
 

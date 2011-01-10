@@ -59,11 +59,14 @@ body { @extend .-xmas-body; }
 
   #content {
     @extend .-xmas-content-wrapper;
-    .section { @extend .-xmas-content; }
+    .created { @extend .-xmas-created; }
+    .section { 
+      @extend .-xmas-content; }
     #breadcrumb { @extend .-xmas-breadcrumb; }
     h1.title { 
-      @extend .-xmas-title; 
-      a { @extend .-xmas-a; } }
+      @extend .-xmas-title;
+      a { @extend .-xmas-a; }
+      .section-node & { @extend .-xmas-node-title; } }
     .messages {
       &.status { @extend .-xmas-messages-status; }
       &.warning { @extend .-xmas-messages-warning; }
@@ -75,7 +78,9 @@ body { @extend .-xmas-body; }
       .secondary { @extend .-xmas-secondary-tabs; } }
     #content-area {
       @extend .-xmas-content-area; 
-      .pager { @extend .-xmas-pager; } }
+      .pager {
+        a { @extend .-xmas-a; }
+        @extend .-xmas-pager; } }
       #mission { @extend .-xmas-mission; }
     .feed-icons { @extend .-xmas-feed-icons; }
 

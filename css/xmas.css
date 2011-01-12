@@ -1,63 +1,268 @@
 @charset "UTF-8";
-/* line 17, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
+.-xmas-h2, .-xmas-node-content h2, #page-wrapper #content .node .content h2 {
+  font-size: 1.286em;
+  font-weight: normal;
+  color: #0079bb;
+}
+
+.-xmas-p, .-xmas-node-content p, #page-wrapper #content .node .content p, .-xmas-block-content p, #page-wrapper .region-sidebar-first .block .content p, #page-wrapper .region-sidebar-second .block .content p, #page-wrapper .region-navigation .block .content p, #page-wrapper .region-highlight .block .content p, #page-wrapper .region-content-top .block .content p, #page-wrapper .region-content-bottom .block .content p, #page-wrapper .region-header .block .content p, #page-wrapper .region-footer .block .content p, #page-wrapper .region-page-closure .block .content p {
+  margin: 0.7em 0;
+  /* TODO: vertical rhythm */
+}
+
+.-xmas-a, .-xmas-node-content a, #page-wrapper #content .node .content a, .-xmas-block-content a, #page-wrapper .region-sidebar-first .block .content a, #page-wrapper .region-sidebar-second .block .content a, #page-wrapper .region-navigation .block .content a, #page-wrapper .region-highlight .block .content a, #page-wrapper .region-content-top .block .content a, #page-wrapper .region-content-bottom .block .content a, #page-wrapper .region-header .block .content a, #page-wrapper .region-footer .block .content a, #page-wrapper .region-page-closure .block .content a, .-xmas-node-links li a, #page-wrapper #content .node .links li a, #page-wrapper #content h1.title a, #page-wrapper #content #content-area .pager a, #page-wrapper #content .node .title a {
+  color: #0079bb;
+  text-decoration: none;
+}
+.-xmas-a:hover, .-xmas-node-content a:hover, #page-wrapper #content .node .content a:hover, .-xmas-block-content a:hover, #page-wrapper .region-sidebar-first .block .content a:hover, #page-wrapper .region-sidebar-second .block .content a:hover, #page-wrapper .region-navigation .block .content a:hover, #page-wrapper .region-highlight .block .content a:hover, #page-wrapper .region-content-top .block .content a:hover, #page-wrapper .region-content-bottom .block .content a:hover, #page-wrapper .region-header .block .content a:hover, #page-wrapper .region-footer .block .content a:hover, #page-wrapper .region-page-closure .block .content a:hover, .-xmas-node-links li a:hover, #page-wrapper #content .node .links li a:hover, #page-wrapper #content h1.title a:hover, #page-wrapper #content #content-area .pager a:hover, #page-wrapper #content .node .title a:hover {
+  text-decoration: underline;
+}
+
+.-xmas-block-content, #page-wrapper .region-sidebar-first .block .content, #page-wrapper .region-sidebar-second .block .content, #page-wrapper .region-navigation .block .content, #page-wrapper .region-highlight .block .content, #page-wrapper .region-content-top .block .content, #page-wrapper .region-content-bottom .block .content, #page-wrapper .region-header .block .content, #page-wrapper .region-footer .block .content, #page-wrapper .region-page-closure .block .content {
+  margin-left: 1em;
+}
+.-xmas-block-content ul, #page-wrapper .region-sidebar-first .block .content ul, #page-wrapper .region-sidebar-second .block .content ul, #page-wrapper .region-navigation .block .content ul, #page-wrapper .region-highlight .block .content ul, #page-wrapper .region-content-top .block .content ul, #page-wrapper .region-content-bottom .block .content ul, #page-wrapper .region-header .block .content ul, #page-wrapper .region-footer .block .content ul, #page-wrapper .region-page-closure .block .content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.-xmas-block-content ul li, #page-wrapper .region-sidebar-first .block .content ul li, #page-wrapper .region-sidebar-second .block .content ul li, #page-wrapper .region-navigation .block .content ul li, #page-wrapper .region-highlight .block .content ul li, #page-wrapper .region-content-top .block .content ul li, #page-wrapper .region-content-bottom .block .content ul li, #page-wrapper .region-header .block .content ul li, #page-wrapper .region-footer .block .content ul li, #page-wrapper .region-page-closure .block .content ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+.-xmas-block-content li, #page-wrapper .region-sidebar-first .block .content li, #page-wrapper .region-sidebar-second .block .content li, #page-wrapper .region-navigation .block .content li, #page-wrapper .region-highlight .block .content li, #page-wrapper .region-content-top .block .content li, #page-wrapper .region-content-bottom .block .content li, #page-wrapper .region-header .block .content li, #page-wrapper .region-footer .block .content li, #page-wrapper .region-page-closure .block .content li {
+  padding: 5px;
+  border-bottom: 1px dotted #ccc;
+}
+.-xmas-block-content li a, #page-wrapper .region-sidebar-first .block .content li a, #page-wrapper .region-sidebar-second .block .content li a, #page-wrapper .region-navigation .block .content li a, #page-wrapper .region-highlight .block .content li a, #page-wrapper .region-content-top .block .content li a, #page-wrapper .region-content-bottom .block .content li a, #page-wrapper .region-header .block .content li a, #page-wrapper .region-footer .block .content li a, #page-wrapper .region-page-closure .block .content li a {
+  color: #666666;
+}
+.-xmas-block-content li a:hover, #page-wrapper .region-sidebar-first .block .content li a:hover, #page-wrapper .region-sidebar-second .block .content li a:hover, #page-wrapper .region-navigation .block .content li a:hover, #page-wrapper .region-highlight .block .content li a:hover, #page-wrapper .region-content-top .block .content li a:hover, #page-wrapper .region-content-bottom .block .content li a:hover, #page-wrapper .region-header .block .content li a:hover, #page-wrapper .region-footer .block .content li a:hover, #page-wrapper .region-page-closure .block .content li a:hover {
+  color: #0079bb;
+}
+
+.-xmas-body, body {
+  background: url('../images/bk_body.jpg?1292877023') no-repeat scroll top center #1f1f30;
+  color: #333333;
+  line-height: 135%;
+  /* TODO: vertical rhythm */
+}
+
+.-xmas-header, #page-wrapper #header {
+  height: 229px;
+  /* TODO: vertical rhythm */
+  position: relative;
+  /* TODO: layout */
+}
+
+.-xmas-name-and-slogan, #page-wrapper #header #name-and-slogan {
+  position: absolute;
+  /* TODO: layout */
+  top: 70px;
+  /* TODO: layout */
+  left: 70px;
+  /* TODO: layout */
+  right: 70px;
+  /* fixes misterious width quirk */
+}
+
+.-xmas-site-name, #page-wrapper #header #name-and-slogan #site-name {
+  letter-spacing: -1px;
+  font-size: 2.429em;
+  background-image: none;
+  padding: 0;
+}
+.-xmas-site-name a, #page-wrapper #header #name-and-slogan #site-name a {
+  font-weight: normal;
+  line-height: 25px;
+  /* TODO: vertical rhythm */
+  color: white;
+}
+
+.-xmas-site-slogan, #page-wrapper #header #name-and-slogan #site-slogan {
+  padding: 10px 0;
+  /* TODO: vertical rhythm */
+  text-transform: uppercase;
+  font-size: 0.786em;
+  color: #CECFDB;
+  /* TODO: color palette */
+}
+
+.-xmas-main, #page-wrapper #main {
+  background: white url('../images/bk_content.jpg?1294011974') 0 0 repeat-y;
+}
+
+.-xmas-content-wrapper, #page-wrapper #content {
+  /* TODO: proper CSS3 background */
+}
+
+.-xmas-content, #page-wrapper #content .section {
+  width: 635px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.-xmas-created, #page-wrapper #content .created {
+  position: absolute;
+  /* TODO: layout */
+  top: 0;
+  left: -40px;
+  height: 35px;
+  width: 70px;
+  background: url('../images/bk_date.png?1294257507') 0 0 no-repeat;
+  color: white;
+  line-height: 25px;
+  /* TODO: vertical rhythm */
+  text-align: center;
+  font-size: 0.786em;
+  /* TODO: vertical rhythm */
+  text-transform: uppercase;
+}
+.-xmas-created span, #page-wrapper #content .created span {
+  font-weight: bold;
+  font-size: 19px;
+  vertical-align: middle;
+}
+
+.-xmas-title, .-xmas-node-title, .section-node #page-wrapper #content h1.title, #page-wrapper #content .node .title, #page-wrapper #content h1.title {
+  background: url('../images/bk_line.jpg?1294092496') no-repeat scroll left bottom transparent;
+  font-size: 1.786em;
+  /* 25px if base font-size is 14px */
+  font-weight: normal;
+  letter-spacing: -1px;
+  padding-bottom: 25px;
+  /* TODO: vertical rhythm */
+}
+.display-submitted .-xmas-title, .display-submitted .-xmas-node-title, .display-submitted .section-node #page-wrapper #content h1.title, .section-node #page-wrapper #content .display-submitted h1.title, .display-submitted #page-wrapper #content .node .title, #page-wrapper #content .node .display-submitted .title, .display-submitted #page-wrapper #content h1.title, #page-wrapper #content .display-submitted h1.title {
+  background: none;
+}
+
+.-xmas-messages ul, .-xmas-messages-error ul, #page-wrapper #content .messages.error ul, .-xmas-messages-warning ul, #page-wrapper #content .messages.warning ul, .-xmas-messages-status ul, #page-wrapper #content .messages.status ul, .-xmas-messages-help ul, #page-wrapper #content .messages.help ul {
+  list-style: none;
+}
+.-xmas-messages ul li, .-xmas-messages-error ul li, #page-wrapper #content .messages.error ul li, .-xmas-messages-warning ul li, #page-wrapper #content .messages.warning ul li, .-xmas-messages-status ul li, #page-wrapper #content .messages.status ul li, .-xmas-messages-help ul li, #page-wrapper #content .messages.help ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+.-xmas-footer, #page-wrapper #footer {
+  padding: 65px 0 40px;
+  /* TODO: vertical rhythm */
+  color: #666666;
+  background: url('../images/bk_footer.jpg?1294012390') 0 0 no-repeat;
+  position: relative;
+  /* TODO: layout */
+}
+
+.-xmas-footer-logo, #page-wrapper .region-footer #block-system-0 {
+  /* meant for Site5 logo */
+  position: absolute;
+  right: 0;
+  top: 65px;
+}
+
+.-xmas-pager, #page-wrapper #content #content-area .pager {
+  margin: 0;
+  padding: 0;
+}
+.-xmas-pager .pager-previous, #page-wrapper #content #content-area .pager .pager-previous {
+  float: right;
+  /* TODO: layout */
+  margin: 5px 0 5px 15px;
+  /* TODO: vertical rhythm */
+}
+.-xmas-pager .pager-next, #page-wrapper #content #content-area .pager .pager-next {
+  float: left;
+  /* TODO: layout */
+  margin: 5px 15px 5px 0;
+  /* TODO: vertical rhythm */
+}
+
+.-xmas-block-title, #page-wrapper .region-sidebar-first .block .title, #page-wrapper .region-sidebar-second .block .title, #page-wrapper .region-navigation .block .title, #page-wrapper .region-highlight .block .title, #page-wrapper .region-content-top .block .title, #page-wrapper .region-content-bottom .block .title, #page-wrapper .region-header .block .title, #page-wrapper .region-footer .block .title, #page-wrapper .region-page-closure .block .title {
+  background: url('../images/bk_h2_right.png?1294281374') 0 0 no-repeat;
+  height: 34px;
+  line-height: 32px;
+  text-indent: 33px;
+  text-transform: uppercase;
+  color: #DBEDF9;
+  text-shadow: #00659F 1px 1px;
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 2px;
+  margin-right: -7px;
+}
+
+.-xmas-node, #page-wrapper #content .node {
+  background: url('../images/bk_line_ornament.jpg?1294232447') bottom left no-repeat;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.created ~ .-xmas-node-title, .created ~ .section-node #page-wrapper #content h1.title, .section-node #page-wrapper #content .created ~ h1.title, .created ~ #page-wrapper #content .node .title, #page-wrapper #content .node .created ~ .title {
+  padding-left: 50px;
+}
+
+.-xmas-node-links li a, #page-wrapper #content .node .links li a {
+  color: #c32400;
+  font-weight: bold;
+}
+
 .region-header {
   clear: both;
 }
 
-/* line 20, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 #main-wrapper {
   position: relative;
 }
 
-/* line 23, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 #page-wrapper, .region-page-closure {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
 
-/* line 41, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 #content {
   width: 960px;
   display: inline;
   float: left;
   padding: 0;
 }
-/* line 47, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 .no-sidebars #content {
   width: 960px;
   margin-left: 0;
   margin-right: -960px;
 }
-/* line 52, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 .sidebar-first #content {
-  width: 760px;
-  margin-left: 200px;
-  margin-right: -960px;
+  width: 690px;
+  margin-left: 0;
+  margin-right: -690px;
 }
-/* line 63, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 .sidebar-second #content {
   width: 760px;
   margin-left: 0;
   margin-right: -760px;
 }
-/* line 74, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 .two-sidebars #content {
-  width: 560px;
-  margin-left: 200px;
-  margin-right: -760px;
+  width: 490px;
+  margin-left: 0;
+  margin-right: -490px;
 }
 
-/* line 89, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 .region-sidebar-first {
   display: inline;
   float: left;
-  width: 200px;
-  margin-left: 0;
-  margin-right: -200px;
+  width: 270px;
+  margin-left: 690px;
+  margin-right: -960px;
+}
+.two-sidebars .region-sidebar-first {
+  margin-left: 490px;
+  margin-right: -760px;
 }
 
-/* line 105, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 .region-sidebar-second {
   display: inline;
   float: left;
@@ -65,19 +270,16 @@
   margin-left: 760px;
   margin-right: -960px;
 }
-/* line 121, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 .two-sidebars .region-sidebar-second {
   margin-left: 760px;
   margin-right: -760px;
 }
 
-/* line 125, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 #content .section {
   margin: 0;
   padding: 0;
 }
 
-/* line 287, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 #navigation {
   overflow: hidden;
   display: inline;
@@ -88,13 +290,11 @@
   padding: 0;
   height: 2.3em;
 }
-/* line 296, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 #navigation ul {
   margin: 0;
   padding: 0;
   text-align: "left";
 }
-/* line 301, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 #navigation li {
   display: inline;
   float: left;
@@ -102,43 +302,35 @@
   padding-right: 10px;
 }
 
-/* line 307, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 .with-navigation #content, .with-navigation .region-sidebar-first, .with-navigation .region-sidebar-second {
   margin-top: 2.3em;
 }
 
-/* line 328, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 body, caption, th, td, input, textarea, select, option, legend, fieldset {
-  font-family: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* line 331, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 pre, code {
-  font-family: '"Courier New", "DejaVu Sans Mono", monospace';
+  font-family: "Courier New", "DejaVu Sans Mono", monospace;
 }
 
-/* line 338, ../../../../.rvm/gems/ruby-1.8.7-p302@compassbeta/gems/compass-drupal-plugin-0.2.0.beta.4/stylesheets/drupal/_zen.scss */
 #skip-link, #page {
   font-size: 0.875em;
   line-height: 1.286em;
 }
 
-/* line 32, ../sass/xmas.scss */
 #page-wrapper {
   /* Content */
   /*  profile category value */
   /* Regions */
 }
-/* line 37, ../sass/xmas.scss */
 #page-wrapper #content {
   /* Nodes */
   /* Profiles */
 }
-/* line 71, ../sass/xmas.scss */
 #page-wrapper #content .profile {
   /* profile category header */
 }
-/* line 75, ../sass/xmas.scss */
 #page-wrapper #content .profile dl {
   /* profile category wrapper */
   /* profile category label */
